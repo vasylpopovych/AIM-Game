@@ -3,6 +3,7 @@ const screens = document.querySelectorAll('.screen')
 const timeList = document.querySelector('#time-list')
 const timeEl = document.querySelector('#time')
 const board = document.querySelector('#board')
+const timeBoard = document.querySelector('h3')
 let time = 0
 let score = 0
 
@@ -52,7 +53,8 @@ function setTime(value) {
 }
 
 function finishGame () {
-    timeEl.parentNode.classList.add('hide')
+    //timeEl.parentNode.classList.add('hide')
+    timeBoard.innerHTML = `<a href="#" class="start" id="start">Начать Заново</a>`
     board.innerHTML = `<h1>Счет: <span class="primary">${score}</span></h1>`
 }
 
