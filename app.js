@@ -3,7 +3,7 @@ const screens = document.querySelectorAll('.screen')
 const timeList = document.querySelector('#time-list')
 const timeEl = document.querySelector('#time')
 const board = document.querySelector('#board')
-const timeBoard = document.querySelector('h3')
+const colors = ['#E52B50', '#B284BE', '#3DDC84', '#00FFFF', '#3DDC84', '#A52A2A', '#DA1884', '#1F75FE']
 let time = 0
 let score = 0
 
@@ -53,9 +53,9 @@ function setTime(value) {
 }
 
 function finishGame () {
-    //timeEl.parentNode.classList.add('hide')
-    timeBoard.innerHTML = `<a href="#" class="start" id="start">Начать Заново</a>`
+    timeEl.parentNode.classList.add('hide')
     board.innerHTML = `<h1>Счет: <span class="primary">${score}</span></h1>`
+
 }
 
 function createRandomCircle () {
@@ -70,10 +70,22 @@ function createRandomCircle () {
     circle.style.height = `${size}px`
     circle.style.top = `${y}px`
     circle.style.left = `${x}px`
+    setColorCircle(circle)
 
     board.append(circle)
 }
 
 function getRandomNumber(min, max) {
     return Math.round(Math.random() * (max - min) + min)
+}
+
+function getRandomColor() {
+    const index = Math.floor(Math.random() * colors.length)
+    return colors[index]
+}
+
+function setColorCircle(element) {
+    const color = getRandomColor()
+    element.style.backgroundColor = color
+    element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`
 }

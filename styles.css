@@ -24,6 +24,10 @@ a:hover {
 
 .start {
   font-size: 1.5rem;
+  background: linear-gradient(118.38deg, #29323C -4.6%, #485563 200.44%);
+  box-shadow: -8px -8px 20px #2A333D, 10px 7px 20px #475462;
+  border-radius: 2px;
+  overflow: hidden;
 }
 
 h1 {
@@ -95,8 +99,11 @@ h1 {
 }
 
 .circle {
-  background: linear-gradient(90deg, #16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+  background: linear-gradient(#46AEF7 100%);
   position: absolute;
   border-radius: 50%;
   cursor: pointer;
 }
+
+
+
