@@ -24,10 +24,11 @@ a:hover {
 
 .start {
   font-size: 1.5rem;
-  background: linear-gradient(118.38deg, #29323C -4.6%, #485563 200.44%);
+  background: #483D8B;
   box-shadow: -8px -8px 20px #2A333D, 10px 7px 20px #475462;
-  border-radius: 2px;
+  border-radius: 5px;
   overflow: hidden;
+  padding: 5px;
 }
 
 h1 {
@@ -70,6 +71,7 @@ h1 {
   font-family: inherit;
   padding: .5rem 1rem;
   font-size: 1.5rem;
+  border-radius: 5px;
 }
 
 .time-btn:hover {
